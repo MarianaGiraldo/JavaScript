@@ -40,9 +40,10 @@ var agregarEmpleado = () => {
 
 var mostrarEmpleados = () => {
     var empleadosMostrar = agregarEmpleado();
-    console.log(empleados)
-    var tabla = document.getElementsByClassName("tablaEmpleados");
-    var tblBody = document.getElementsByTagName("tbody");
+    console.log(empleados);
+
+    //Mostrar en tabla
+    var tblBody = document.getElementsByTagName("tbody")[0];
 
     // Crea las celdas
   for (var i = 0; i < empleadosMostrar.length; i++) {
@@ -54,16 +55,31 @@ var mostrarEmpleados = () => {
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
       
-      celda = document.createElement("td");
+      var celda2 = document.createElement("td");
       textoCelda = document.createTextNode(empleadosMostrar[i].datosBasicos.nombre);
-      celda.appendChild(textoCelda);
-      hilera.appendChild(celda);
+      celda2.appendChild(textoCelda);
+      hilera.appendChild(celda2);
 
-      celda = document.createElement("td");
+      var celda3 = document.createElement("td");
       textoCelda = document.createTextNode(empleadosMostrar[i].datosBasicos.email);
-      celda.appendChild(textoCelda);
-      hilera.appendChild(celda);
+      celda3.appendChild(textoCelda);
+      hilera.appendChild(celda3);
 
+      var celda4 = document.createElement("td");
+      textoCelda = document.createTextNode(empleadosMostrar[i].datosTrabajo.cargo);
+      celda4.appendChild(textoCelda);
+      hilera.appendChild(celda4);
+
+      var celda5 = document.createElement("td");
+      textoCelda = document.createTextNode(empleadosMostrar[i].datosTrabajo.salario);
+      celda5.appendChild(textoCelda);
+      hilera.appendChild(celda5);
+
+      var celda6 = document.createElement("td");
+      textoCelda = document.createTextNode(empleadosMostrar[i].datosTrabajo.sede);
+      celda6.appendChild(textoCelda);
+      hilera.appendChild(celda6);
+    }
 
     // agrega la hilera al final de la tabla (al final del elemento tblbody)
     tblBody.appendChild(hilera);
