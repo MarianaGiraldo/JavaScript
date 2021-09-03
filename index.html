@@ -7,9 +7,81 @@
     <title>Document</title>
 
     <script src="js/fundamentos.js"></script>
-    <script src=""></script>
+    <script src="js/funcion-Flecha.js"></script>
+    <script src="js/vectores.js"></script>
+    <script src="js/objetos.js"></script>
+    <script src="js/ejercicio-PersonaObjetos.js"></script>
+    <script src="js/prueba.js"></script>
+    <script src="js/ejercicioCalculadora.js"></script>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
 </head>
 <body>
-    
+    <br>
+    <!-- <input type="button" value="De click para saludar" onclick="saludar();">
+    <br>
+    <input type="text" name="codigo" id="codigo" value="123"> <br>-->
+    <div>
+        <h1>Agregar Empleado</h1>
+        <hr>
+        <form>
+            <h3>Datos Básicos</h3>
+            <label for="documento">Ingrese su documento: </label>
+            <input type="text" name="documento" id="documento"><br>
+            <label for="nombre">Ingrese su nombre: </label>
+            <input type="text" name="nombre" id="nombre"><br>
+            <label for="email">Ingrese su email: </label>
+            <input type="text" name="email" id="email"><br>
+
+            <h3>Datos del trabajo</h3>
+            <label for="cargo">Ingrese su cargo: </label>
+            <input type="text" name="cargo" id="cargo"><br>
+            <label for="salario">Ingrese su salario: </label>
+            <input type="text" name="salario" id="salario"><br>
+            <label for="sede">Ingrese su sede: </label>
+            <input type="text" name="sede" id="sede"><br>
+            <input type="button" value="Agregar" onclick="mostrarEmpleados();">
+        </form>
+    </div>
+    <h3>Empleados: </h3>
+        <table class="tablaEmpleados">
+            <thead>
+                <tr>
+                    <th colspan="3">Datos Básicos</th>
+                    <th colspan="3">Datos del Trabajo</th>
+                </tr>
+                <tr>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>email</th>
+                    <th>Cargo</th>
+                    <th>Salario</th>
+                    <th>Sede</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    <hr>
+    <br><br><br>
+    <div>
+        <form>
+            <h1>Calculadora</h1>
+            <hr>
+            <label for="num1">Escriba un número: </label>
+            <input type="text" name="num1" id="num1"><br>
+            <label for="num2">Escriba otro número: </label>
+            <input type="text" name="num2" id="num2"><br>
+            <label for="operacion">Escriba el signo de la operación (+, -, *, /): </label>
+            <input type="text" name="operacion" id="operacion"><br>
+            <input type="button" value="Calcular" onclick="mostrarResultado();">
+        </form>
+        <h3>Resultado: </h3>
+        <p id="resultado">No calculado</p>
+    </div>
 </body>
 </html>
