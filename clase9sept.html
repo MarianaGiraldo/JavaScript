@@ -13,12 +13,36 @@
 			margin:2px;
         }
     </style>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
     <script src="js/estructura.js"></script>
     <script src="js/desglosar.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/string.js"></script>
+    <script src="js/Interval-TimeOut.js"></script>
+    <script src="js/promesas.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/axios.js"></script>
+
 </head>
 <body>
     <div class="color"></div>
-    
+    <br><br>
+    <h1>Promises</h1>
+    <h2>Generar multas por Velocidad</h2>
+    <label for="velocidad">Ingrese la velocidad del vehículo: </label>
+    <input type="text" name="velocidad" id="velocidad">
+    <input type="button" value="Consultar Multa" onclick="generarMulta()">
+    <br>
+    <p class="resultado" id="resultado"></p>
+    <br><br>
+    <h2>Contraseña</h2>
+    <label for="contrasena">Ingrese su contraseña: </label>
+    <input type="password" name="contrasena" id="contrasena"><br>
+    <label for="confirmContrasena">Confirme su contraseña: </label>
+    <input type="password" name="confirmContrasena" id="confirmContrasena"><br>
+    <input type="button" value="Verificar" onclick="verificarContrasena()">
+    <br>
+    <p id="verificacion"></p>
 </body>
 </html>
